@@ -1,28 +1,115 @@
-.App {
-  text-align: center;
+/* Base */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+.App {
+  text-align: center;
+  color: white;
+}
+
+main {
+  background-color: #32AC71;
+  background: linear-gradient(#8BC249, #32AC71);
+}
+
+
+
+/*  Modules  */
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
   height: 80px;
+  width: 300px;
+  /* animation: App-logo-spin infinite 20s linear; */
+  animation: lightSpeedIn .8s ;
 }
 
 .App-header {
+  align-items: center;
+  /* animation: bounceInDown .8s; */
   background-color: #222;
-  height: 150px;
-  padding: 20px;
   color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  padding: 20px;
+  transition: .2s;
 }
 
 .App-title {
   font-size: 1.5em;
+  animation: lightSpeedIn 1s ;
+
 }
 
 .App-intro {
   font-size: large;
 }
 
+  /* Wellness component */
+
+.wellness-comp {
+  padding: 10px;
+}
+
+  /* Feelings component */
+
+.feeling {
+  background-color: rgba(34, 34, 34, 0.372);
+  margin: 20px;
+  padding: 10px 0;
+}
+
+.feeling:first-child {
+  margin-top: 0;
+}
+
+.feeling:last-child {
+  margin-bottom: 0;
+}
+
+
+
+
+
+/*  Animations  */
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+@keyframes lightSpeedIn {
+  from {
+    -webkit-transform: translate3d(200%, 0, 0) skewX(-30deg);
+    transform: translate3d(200%, 0, 0) skewX(-30deg);
+
+  }
+
+  60% {
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+
+/* Colors */
+
+/* background green: #0b552b;
+ */
